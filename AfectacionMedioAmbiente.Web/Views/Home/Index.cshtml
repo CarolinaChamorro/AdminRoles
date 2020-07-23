@@ -1,0 +1,33 @@
+﻿@model IEnumerable<Usuario>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<h4 class="text-center text-uppercase">Lista de usuario</h4>
+
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.NombreCompleto)</th>
+            <th>@Html.DisplayNameFor(model => model.Telefono)</th>
+            <th>@Html.DisplayNameFor(model => model.Correo)</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var usuario in Model)
+        {
+            <tr>
+                <td>
+                    <img src="~/images/@usuario.ImagenPerfil"
+                         class="rounded-circle"
+                         height="40" width="40"
+                         asp-append-version="true" />
+                    @usuario.NombreCompleto
+                </td>
+                <td>@usuario.Telefono</td>
+                <td>@usuario.Correo</td>
+            </tr>
+        }
+    </tbody>
+</table>

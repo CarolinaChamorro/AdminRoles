@@ -1,0 +1,19 @@
+{
+  "dependencies": {
+    "mssql1": {
+      "type": "mssql.local",
+      "connectionId": "DefaultConnection"
+    },
+    "mssql2": {
+      "type": "mssql.local",
+      "connectionId": "Context"
+    },
+    "mssql3": {
+      "type": "mssql.local",
+      "connectionId": "MainContext"
+    },
+    "secrets1": {
+      "type": "secrets.user"
+    }
+  }
+}
